@@ -5,13 +5,13 @@ Toy project to try out Apple Music API.
 
 ### Requirements
 
-#### Credentials
+####  Credentials
 
 - Spotify Web API `client id` and `client secret`
 - Apple Music API `developer token`
 - Apple Music API `music user token`
 
-#### Dependencies
+###  Dependencies
 
 ```
 opam install jbuilder cohttp cohttp-lwt-unix lwt yojson tls core core_extended atdgen
