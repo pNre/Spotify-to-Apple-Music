@@ -1,0 +1,10 @@
+(jbuild_version 1)
+
+(executables
+ ((names (main))
+  (public_names (spotify-to-apple-music))
+  (libraries (lwt cohttp cohttp-lwt-unix yojson tls core core_extended.base64 atdgen))
+  (preprocess
+   (pps (lwt.ppx)))
+  (modules (main migration spotify_t spotify_j spotify apple_music_playlist_t apple_music_playlist_j apple_music_search_t apple_music_search_j apple_music))
+  (package spotify-to-apple-music)))

@@ -1,0 +1,10 @@
+lib: [
+  "_build/install/default/lib/spotify-to-apple-music/META" {"META"}
+  "_build/install/default/lib/spotify-to-apple-music/opam" {"opam"}
+]
+bin: [
+  "_build/install/default/bin/spotify-to-apple-music" {"spotify-to-apple-music"}
+]
+doc: [
+  "_build/install/default/doc/spotify-to-apple-music/README.md"
+]

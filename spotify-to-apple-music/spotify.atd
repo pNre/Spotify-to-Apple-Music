@@ -1,0 +1,28 @@
+type uri = string wrap <ocaml t="Uri.t" wrap="Uri.of_string" unwrap="Uri.to_string">
+
+type access_token_response = {
+  access_token: string
+}
+
+type artist = {
+  name: string
+}
+
+type track = {
+  name: string;
+  artists: artist list
+}
+
+type playlist_track = {
+  track: track
+}
+
+type playlist_tracks_page = {
+  items: playlist_track list;
+  ?next: uri option
+}
+
+type playlist_response = {
+  name: string;
+  tracks: playlist_tracks_page
+}

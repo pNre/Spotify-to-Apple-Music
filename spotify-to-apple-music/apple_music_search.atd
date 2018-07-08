@@ -1,0 +1,25 @@
+type uri = string wrap <ocaml t="Uri.t" wrap="Uri.of_string" unwrap="Uri.to_string">
+
+type song_attributes = {
+  album_name <json name="albumName">: string;
+  artist_name <json name="artistName">: string;
+  name: string;
+  url: uri
+}
+
+type song = {
+  id: string;
+  ?attributes: song_attributes option;
+}
+
+type song_response = {
+  data: song list
+}
+
+type search_results = {
+  ?songs: song_response option
+}
+
+type search_response = {
+  results: search_results
+}

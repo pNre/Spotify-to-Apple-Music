@@ -1,0 +1,32 @@
+type library_playlist_creation_request_attributes = {
+  ?description: string option;
+  name: string
+}
+
+type library_playlist_creation_request = {
+  attributes: library_playlist_creation_request_attributes
+}
+
+type track_type = [
+    Songs <json name="songs">
+  | Music_videos <json name="music-videos">
+  | Library_songs <json name="library-songs">
+  | Library_music_videos <json name="library-music-videos">
+]
+
+type library_playlist_request_track = {
+  id: string;
+  track_type: track_type
+}
+
+type library_playlist_tracks_request = {
+  data: library_playlist_request_track list
+}
+
+type library_playlist = {
+  id: string
+}
+
+type library_playlist_response = {
+  data: library_playlist list
+}

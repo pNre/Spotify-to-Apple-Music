@@ -1,0 +1,14 @@
+opam-version: "1.2"
+maintainer: "mail@pierluigi.me"
+authors: ["pNre"]
+homepage: "https://github.com/pNre/spotify-to-apple-music"
+bug-reports: "https://github.com/pNre/spotify-to-apple-music/issues"
+dev-repo: "https://github.com/pNre/spotify-to-apple-music.git"
+
+build: [
+  ["jbuilder" "build" "-p" name "-j" jobs]
+]
+
+depends: [
+  "jbuilder" {build & >= "1.0+beta14"}
+]
